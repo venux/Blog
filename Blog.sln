@@ -3,32 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Core", "01.Core", "{55E9681A-9FF2-4AED-A087-26D426A190C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.其他", "00.其他\00.其他.csproj", "{248400FD-F567-4946-8A74-1E63F2EEB852}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.UML", "02.UML", "{11AE5F86-7AFB-47D7-9940-02AF3A1A23E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ASP.NET Core", "01.ASP.NET Core\01.ASP.NET Core.csproj", "{6BBD208B-4748-4DEC-991F-112B98BDEB32}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Other", "00.Other", "{ACB4A4C1-8DB8-44A8-AFF8-F417A0DE054B}"
-	ProjectSection(SolutionItems) = preProject
-		01.Markdown学习笔记.md = 01.Markdown学习笔记.md
-		02.Redis学习笔记.md = 02.Redis学习笔记.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.UML Distilled", "01.UML Distilled", "{3C7EBA09-80CB-4291-8723-216F00C02A64}"
-	ProjectSection(SolutionItems) = preProject
-		Chapter3 Class Diagrams-The Essentials.md = Chapter3 Class Diagrams-The Essentials.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.入门", "01.入门", "{66E19386-1022-4F28-BB05-EDE0C058C53B}"
-	ProjectSection(SolutionItems) = preProject
-		01.ASP.NET Core基本原理概况.md = 01.ASP.NET Core基本原理概况.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.UML图", "02.UML图\02.UML图.csproj", "{D03FB7C8-8F59-4E54-9FFD-B08FF26E830A}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{248400FD-F567-4946-8A74-1E63F2EEB852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248400FD-F567-4946-8A74-1E63F2EEB852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248400FD-F567-4946-8A74-1E63F2EEB852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248400FD-F567-4946-8A74-1E63F2EEB852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBD208B-4748-4DEC-991F-112B98BDEB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBD208B-4748-4DEC-991F-112B98BDEB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBD208B-4748-4DEC-991F-112B98BDEB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBD208B-4748-4DEC-991F-112B98BDEB32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03FB7C8-8F59-4E54-9FFD-B08FF26E830A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03FB7C8-8F59-4E54-9FFD-B08FF26E830A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03FB7C8-8F59-4E54-9FFD-B08FF26E830A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03FB7C8-8F59-4E54-9FFD-B08FF26E830A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3C7EBA09-80CB-4291-8723-216F00C02A64} = {11AE5F86-7AFB-47D7-9940-02AF3A1A23E3}
-		{66E19386-1022-4F28-BB05-EDE0C058C53B} = {55E9681A-9FF2-4AED-A087-26D426A190C7}
 	EndGlobalSection
 EndGlobal
