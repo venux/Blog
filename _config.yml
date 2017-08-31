@@ -5,7 +5,7 @@
 # Site
 title: 祥_venux
 subtitle: 个人博客
-description: Hello,World
+description: .NET
 author: 祥_venux
 language: zh-Hans
 timezone:
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: 4
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
