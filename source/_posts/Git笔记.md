@@ -216,13 +216,20 @@ git pull origin master
 
 ## 37.更新fork的repo
 
-1 git remote add upstream $repoUrl
-2 git fetch upstream
-3 git merge upstream/master master
-4 git push origin master
+1 **git remote -v**
+查看当前Fork项目已配置的远程仓库（List the current configured remote repository for your fork）
+2 **git remote add upstream `url`**
+指定将要同步Fork项目的一个远程上游仓库（Specify a new remote upstream repository that will be synced with the fork.）
+3 **git remote -v**
+再次查看
+4 **git fetch upstream**
+拉取上游仓库的所有分支和更改记录，mater分支提交记录会在本地分支中保存。（Fetch the branches and their respective commits from the upstream repository. Commits to master will be stored in a local branch, upstream/master.）
+5 **git checkout master**
+迁出本地master分支（Check out your fork's local master branch.）
+6 **git merge upstream/master**
+将上游仓库的master分支更改记录合并到本地master分支中，即同步且不会丢失本地更改记录。（Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.）
 
 ## 参考文章
 
 1 [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-2 [更新fork的repo1](http://www.cnblogs.com/kidsitcn/p/4526562.html)
-3 [更新fork的repo2](https://segmentfault.com/q/1010000002590371)
+2 [syncing-a-fork](https://help.github.com/articles/syncing-a-fork/)
