@@ -229,6 +229,15 @@ git pull origin master
 6 **git merge upstream/master**
 将上游仓库的master分支更改记录合并到本地master分支中，即同步且不会丢失本地更改记录。（Merge the changes from upstream/master into your local master branch. This brings your fork's master branch into sync with the upstream repository, without losing your local changes.）
 
+## 38.添加SSH至Github
+
+1 **生成**
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+2 **拷贝**
+将`C:\Users\Administrator\.ssh\id_rsa.pub`的值添加到Github个人设置的SSH中。
+3 **检验**
+ssh -T git@github.com
+
 ## 参考文章
 
 1 [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
