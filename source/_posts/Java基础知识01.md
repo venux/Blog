@@ -592,12 +592,109 @@ public class className
 ### 42.2 import
 
 - 文件中可以包含任意数量的import声明。import声明必须在包声明之后，类声明之前。
+- 静态导入
+```java
+import static java.lang.Math.*;
+import static java.lang.System.out;
+```
 
 ### 42.3 CLASSPATH
 
 类目录的绝对路径叫做class path。设置在系统变量CLASSPATH中。编译器和java虚拟机通过将package名字加到class path后来构造.class文件的路径。<path- two>\classes是class path，package名字是com.apple.computers,而编译器和JVM会在 <path-two>\classes\com\apple\compters中找.class文件。
 一个class path可能会包含好几个路径。多路径应该用分隔符分开。默认情况下，编译器和JVM查找当前目录。JAR文件按包含Java平台相关的类，所以他们的目录默认放在了class path中。
 
+## 43 Object
+
+名称|含义
+----|----
+public String toString()|它是实现在Object类中，我们可以自定义它。它返回对象的字符串表示形式。通常，它用于调试目的。
+public boolean equals(Object obj)|它在Object类中实现，我们可以自定义它。它用于比较两个对象的相等性。
+public int hashCode()|它在Object类中实现，我们可以自定义它。它返回对象的哈希码（整数）值。
+protected Object clone() throws CloneNotSupportedException|它不在Object类中实现，我们可以通过覆盖克隆方法来自定义它。它用于创建对象的副本。
+protected void finalize() throws Throwable|它不是在Object类中实现，我们可以自定义它。它在对象被销毁之前被垃圾收集器调用。
+public final Class getClass()|它在Object类中实现，我们不能自定义它。它返回对对象的Class对象的引用。
+public final void notify()|它是在Object类中实现的，我们不能自定义它。此方法通知对象的等待队列中的一个线程。
+public final void notifyAll()|它是在Object类中实现的，我们不能自定义它。此方法通知对象的等待队列中的所有线程。
+public final void wait() throws InterruptedException<br/>public final void wait(long timeout) throws InterruptedException<br/>public final void wait (long timeout, int nanos) throws InterruptedException|它是在Object类中实现的，我们不能自定义它。使对象的等待队列中的线程等待，无论是否超时。
+
+### 43.1 hashCode
+
+- 如果两个对象使用equals()方法相等，则它们必须具有相同的哈希码。
+- 如果x.hashCode()等于y.hashCode()，则x.equals(y)不必返回true。
+
+### 43.2 equals
+
+这里是equals()方法的实现的规范。假设x，y和z是三个对象的非空引用。
+- 自反性。表达式x.equals(x)应该返回true。
+- 对称性。如果x.equals(y)返回true，y.equals(x)必须返回true。
+- 传递性。如果x.equals(y)返回true，y.equals(z)返回true，则x.equals(z)必须返回true。
+- 一致性。如果x.equals(y)返回true，它应该保持返回true，直到x或y的状态被修改。如果x.equals(y)返回false，它应该保持返回false，直到x或y的状态被修改。
+- 与空引用的比较：任何类的对象不应等于空引用。表达式x.equals(null)应始终返回false。
+- 与hashCode()方法的关系：如果x.equals(y)返回true，x.hashCode()必须返回与y.hashCode()相同的值。
+
+### 43.3 toString
+
+当需要对象的字符串表示时，Java会自动调用toString()方法。
+```java
+String str = "Hello" + new Point(10, 20);
+```
+等同于
+```java
+String str = "Hello" + new Point(10, 20).toString();
+```
+
+### 43.4 clone（浅拷贝）
+
+Java不提供克隆(复制)对象的自动机制。克隆对象意味着逐位复制对象的内容。要支持克隆操作，请在类中实现clone()方法。
+```java
+public Object clone() {
+  MyClass copy = null;
+  try {
+    copy = (MyClass) super.clone();
+  } catch (CloneNotSupportedException e) {
+    e.printStackTrace();
+  }
+  return copy;
+}
+```
+
+### 43.5 finalize
+
+finalize()方法将在类的对象销毁之前由垃圾回收器调用。
+
+### Immutables(不可变)
+
+在创建状态后无法更改其状态的对象称为不可变对象。一个对象不可变的类称为不可变类。不变的对象可以由程序的不同区域共享而不用担心其状态改变。不可变对象本质上是线程安全的。
+```java
+public  class  IntWrapper {
+    private  final  int  value;
+
+    public IntWrapper(int value) {
+        this.value = value;
+    }
+    public int  getValue() {
+        return value;
+    }
+}
+```
+
+### 43.7 Objects类(实用程序类)
+
+主要用于处理对象。由静态方法组成。 Objects类中的大多数方法都会优雅地处理空值。
+
+方法|描述
+----|----
+int compare(T a, T b, Comparator c)|如果参数相同，则返回0，否则返回c.compare(a，b)。因此，如果两个参数都为null，则返回0。
+boolean deepEquals(Object a, Object b)|检查两个对象是否相等。如果两个参数都相等，则返回true。否则，它返回false。如果两个参数都为null，则返回true。
+boolean equals(Object a, Object b)|比较两个对象是否相等。如果两个参数相等，则返回true。否则，它返回false。如果两个参数都为null，则返回true。
+int hash(Object... values)|为所有指定的对象生成哈希码。它可以用于计算对象的哈希码，该哈希码基于多个实例字段。
+int hashCode(Object o)|返回指定对象的哈希码值。如果参数为null，则返回0。
+boolean isNull(Object obj)|如果指定的对象为null，isNull()方法返回true。否则，它返回false。您还可以使用比较运算符==检查对象是否为null，例如，obj == null返回obj的true为null。
+boolean nonNull(Object obj)|执行与isNull()方法相反的检查。
+T requireNonNull(T obj)|检查参数是否为null。如果参数为null，它会抛出一个NullPointerException异常。此方法设计用于验证方法和构造函数的参数。
+T requireNonNull(T obj, String message)|第二个版本可以指定当参数为null时抛出的NullPointerException的消息。
+T requireNonNull(T obj, Supplier messageSupplier)|第三个版本的方法将一个Supplier作为第二个参数。
+String toString(Object o)<br/>String toString(Object o, String nullDefault)|如果参数为null，则toString()方法返回一个“null”字符串。对于非空参数，它返回通过调用参数的toString()方法返回的值。
 
 ## 注意
 
