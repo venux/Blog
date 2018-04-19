@@ -1,13 +1,19 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: java-名词解释
 comments: true
 tags:
-  - Java  
+  - Java
 categories: Java
+date: 2018-04-15 22:19:21
 ---
-## 1 
+## 1 名词解释
 
+缩写|全称|详细信息
+----|----|----
+POJOs|Plain Old Java Objects|普通的 Java对象
+DAO|Data Access Objects|数据访问对象
+CGI|Common Gateway Interfa e|公共网关接口
+JSP|Java Server Pages|Java服务页面（动态网页开发技术）
 <!--more-->
 
 ## 参考

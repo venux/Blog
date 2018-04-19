@@ -35,7 +35,6 @@ public class HelloWorld{
 
 ## 4 Java 关键字
 
-
 关键字|描述
 -----|-----
 abstract|抽象方法，抽象类的修饰符
@@ -473,6 +472,17 @@ typeName... parameterName，必须放置在最后一个（即C#的param int arr�
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 ```
+
+### 29.2 获取或设置JVM当前工作目录
+
+```java
+System.getProperty("user.dir");
+System.setProperty("user.dir", "C:\\myDir");
+```
+
+### 29.3 文件分隔符
+
+常量**File.separator**，用于解决Windows在路径名中使用反斜杠（\）作为名称分隔符，而UNIX使用正斜杠（/）的问题。
 
 ## 30 Scan(java.util.SCanner)
 
