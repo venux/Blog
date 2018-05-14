@@ -48,7 +48,7 @@ ${basedir}/src/test/resources|测试使用的资源
 
 ### 2.5 测试
 
-- **maven -v**:版本号
+- **mvn -v**:版本号
 
 ### 2.6 集成IDE
 
