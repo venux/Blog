@@ -120,7 +120,7 @@ git branch -d $branchname
 1 master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
 2 dev分支干活，不稳定的.每个人都有自己的分支，时不时地往dev分支上合并就可以了。到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；
 3 所以，团队合作的分支看起来就像这样：
-![图1](https://www.liaoxuefeng.com/files/attachments/001384909239390d355eb07d9d64305b6322aaf4edac1e3000/0)
+![图1](/images/posts/git分支.png)
 
 ## 22.储藏
 
