@@ -238,6 +238,12 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 3 **检验**
 ssh -T git@github.com
 
+## 39.关联远程分支
+
+git branch --set-upstream-to=origin/$branchame release
+
+在本地新建分支后，需要关联远程分支，否则提示 `There is no tracking information for the current branch.`
+
 ## 参考文章
 
 1 [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
