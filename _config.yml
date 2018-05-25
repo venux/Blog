@@ -14,8 +14,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.venux.cn
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: /posts/:title/    #year/:month/:day/:title/
+permalink_defaults: 
 
 # Directory
 source_dir: source
@@ -81,3 +81,16 @@ deploy:
   type: git
   repo: git@github.com:venux/venux.github.io.git
   branch: master
+
+# Server
+server:
+  port: 12727
+  compress: true
+  header: true
+
+  # Generate categories from directory-tree
+# Dependencies: https://github.com/xu-song/hexo-auto-category
+# depth: the depth of directory-tree you want to generate, should > 0
+auto_category:
+ enable: true
+ depth: 9
