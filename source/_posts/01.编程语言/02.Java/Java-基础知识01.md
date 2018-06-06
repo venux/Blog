@@ -633,6 +633,7 @@ public final void wait() throws InterruptedException<br/>public final void wait(
 
 - 如果两个对象使用equals()方法相等，则它们必须具有相同的哈希码。
 - 如果x.hashCode()等于y.hashCode()，则x.equals(y)不必返回true。
+- **快速实现 hashCode方法**：读取 equals() 使用的所有字段的 hash 码，然后对它们进行按位异或（^）操作。
 
 ### 43.2 equals
 
