@@ -185,11 +185,22 @@ rootProject {
 }
 ```
 
-[官方用户手册](https://docs.gradle.com/build-scan-plugin/)
+[官方用户手册](https://docs.gradle.com/build-scan-plugin)
+
+## 6. 迁移 Maven 至 Gradle
+
+### 6.1 自动转换
+
+`gradle init`命令：该命令允许自动将 Maven 项目转换为 Gradle 项目。
+`ps`：
+- 自动转换中组件不会自动转换，或有问题，需手动处理。
+- 如果幸运地转换成功，可使用`gradle build`测试。
+
+具体迁移信息详见[迁移 Maven 至 Gradle](https://guides.gradle.org/migrating-from-maven)
 
 ## 参考
 
-1 [博客](http://www.venux.cn)
+1 [官方文档](https://docs.gradle.org/current/userguide/userguide.html)
 
 ## 注意
 
