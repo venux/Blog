@@ -4,6 +4,8 @@ comments: true
 tags:
   - SQL Server
   - Oracle
+categories:
+  - 02.数据库
 date: 2018-07-12 13:31:10
 ---
 
@@ -21,3 +23,5 @@ date: 2018-07-12 13:31:10
 - [Migrating a Microsoft SQL Server Database to Oracle Database 11g](http://www.oracle.com/webfolder/technetwork/tutorials/obe/db/hol08/sqldev_migration/mssqlserver/migrate_microsoft_sqlserver_otn.htm)
 - [用 SQL Developer 3.2 将 SQL Server 2008 数据库离线迁移到 Oracle 11g](https://blog.csdn.net/rootcn/article/details/8894130)
 - [Oracle和sqlserver数据类型对应](https://www.cnblogs.com/benbenfishfish/p/8675075.html)
+- [Oracle 和SQL Server 中的SQL语句使用区别](https://www.cnblogs.com/Jashinck/p/8652058.html)
+- [sql server t-sql脚本转成oracle plsql](https://blog.csdn.net/leftfist/article/details/71133570)

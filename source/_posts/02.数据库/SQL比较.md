@@ -5,8 +5,17 @@ tags:
   - SQL Server
   - Oracle
   - MySQL
+categories:
+  - 02.数据库
 date: 2018-07-17 13:31:10
 ---
+
+## 各类区别
+
+问题|SQL Server|Oracle|MySQL
+----|----|----|----
+指定条数|TOP|ROWNUM|LIMIT
+排序（ASC）|null最小|null最大|-
 
 ### 参考
 
