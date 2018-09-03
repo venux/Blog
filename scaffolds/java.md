@@ -4,7 +4,7 @@ date: {{ date }}
 comments: true
 tags:
   - Java  
-categories: Java
+# categories: Java
 ---
 ## 1 
 
