@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "本地测试",
+      "appliesTo": "/",
+      "type": "launch",
+      "command": "cmd.exe",
+      "args": ["hexo","s"]
+    }   
+  ]
+}

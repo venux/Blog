@@ -8,6 +8,7 @@ comments: false
 
 时间|类型|名称|作者|状态|图片
 :--:|:--:|----|:--:|:--:|:--:
+2018/09|工具|VS2017_Succinctly|[美]Alessandro Del Sole|100%|![VS2017入门手册](/images/books/VS2017入门手册.png)
 2018/07-2018/08|架构|领域驱动设计：软件核心复杂性应对之道|[美]Eric Evans|100%|![领域驱动设计：软件核心复杂性应对之道](/images/books/领域驱动设计：软件核心复杂性应对之道.jpg)
 2018/06|工具|[Docker-从入门到实践](https://github.com/yeasy/docker_practice)|yeasy|100%|![Docker-从入门到实践](/images/books/Docker从入门到实践.png)
 2018/06|区块链|区块链革命：比特币底层技术如何改变货币、商业和世界|[加]唐塔普斯科特 <br/> [加]亚力克斯·塔普斯科特|<span style="color:red;">25%</span>|![区块链革命](/images/books/区块链革命.jpg)
