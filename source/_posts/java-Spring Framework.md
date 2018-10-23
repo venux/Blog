@@ -5,10 +5,7 @@ tags:
   - Java
   - Spring
   - Spring Framework
-categories: 
-  - Java
-  - Spring
-  - Spring Framework
+categories: []
 date: 2018-04-29 11:09:12
 ---
 ## 1 简介

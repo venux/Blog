@@ -1,9 +1,9 @@
 ---
-title: 'XmlSerializer问题汇总'
+title: XmlSerializer问题汇总
 comments: true
 tags:
   - 'C#'
-  - '疑难杂症'
+  - 疑难杂症
 categories:
   - 01.编程语言
   - 01.CSharp

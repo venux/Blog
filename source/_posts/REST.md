@@ -3,8 +3,7 @@ title: REST 介绍
 comments: true
 tags:
   - REST
-categories: 
-  - 架构
+categories: []
 date: 2018-04-30 18:52:12
 ---
 ## 1 简介
