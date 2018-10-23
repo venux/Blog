@@ -2,9 +2,6 @@
 title: 多环境工作
 comments: true
 tags: ASP.NET Core
-categories:
-  - 01.编程语言
-  - 01.CSharp
 date: 2017-08-31 15:26:07
 ---
 
